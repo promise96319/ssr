@@ -1,13 +1,9 @@
-import { useState } from 'react'
+import { createRoot } from 'react-dom/client'
+import {
+  RouterProvider,
+  // createHashRouter as createBrowserRouter,
+  createBrowserRouter,
+} from 'react-router-dom'
+import { routes } from './routes'
 
-export function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div>
-      hello world
-      count: {count}
-      <button onClick={() => setCount(count + 1)}>click me</button>
-    </div>
-  )
-}
+createRoot(document.getElementById('root') as HTMLElement).render(<RouterProvider router={createBrowserRouter(routes)} />)
