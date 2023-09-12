@@ -16,7 +16,7 @@ app.get('/data', (_req, res) => {
   res.send({ data: 'data' })
 })
 
-app.get('/', async (req, res) => {
+app.get('/*', async (req, res) => {
   const html = await fs.readFile(path.resolve(__dirname, './public/index.html'), 'utf-8')
   const { query, dataRoutes } = createStaticHandler(routes)
   const request = new Request(`http://localhost:9000${req.originalUrl}`, { method: 'get' })
