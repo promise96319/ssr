@@ -9,6 +9,14 @@
 
 ## 需要解决的问题
 
-- 数据获取
-- 路由跳转
-- xxx
+- 数据获取（static init data）
+- 文件路由（提前读取生成）
+- 路由跳转（remix react-router）
+- 流式渲染（）
+- 孤岛
+
+## 技术点
+
+- react-router 实现？
+- 流式渲染实现？
+- hydrate 实现？

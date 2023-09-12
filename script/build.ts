@@ -14,6 +14,10 @@ export function buildClientRuntime() {
           chunkFileNames: '[name].js',
           assetFileNames: '[name].[ext]',
         },
+        watch: {
+          clearScreen: true,
+          include: path.resolve(__dirname, '../src'),
+        },
       },
     },
   })
